@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* ===== Custom Styles ===== */
+
+/* Smooth page transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9; /* slate-100 */
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* slate-300 */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* slate-400 */
+}
+
+/* Gradient text helper */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb, #3b82f6); /* blue-600 to blue-500 */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Clean card effect (replaces old glass effect) */
+.glass {
+  background: #ffffff;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Soft pulse animation for buttons (refined glow) */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2); }
+}
+.btn-glow:hover {
+  animation: pulse-glow 1.5s infinite;
+}
+
